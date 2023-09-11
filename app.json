@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "05d8f092-76de-496c-9350-f959a99a2ae5"
+      }
+    },
+    "owner": "tagizade.samir"
   }
 }
