@@ -7,4 +7,9 @@ enum StorageKeys {
   cities = 'cities',
 }
 
-export {Routes, StorageKeys}
+enum ApiRoutes {
+  search = 'search',
+  forecast = 'forecast',
+}
+
+export {Routes, StorageKeys, ApiRoutes}

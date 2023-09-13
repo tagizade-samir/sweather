@@ -7,6 +7,7 @@ const globalStyles = StyleSheet.create({
   centeredRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
   },
   p: {
     color: '#000',

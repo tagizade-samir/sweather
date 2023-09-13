@@ -1,1 +1,2 @@
-export * from './useCities'
+export * from './useSearchCity'
+export * from './useCityInfo'
