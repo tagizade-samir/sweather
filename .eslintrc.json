@@ -1,0 +1,13 @@
+{
+  "extends": "universe/native",
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false
+      }
+    ],
+    "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
+    "object-curly-spacing": ["error", "never"]
+  }
+}
