@@ -1,3 +1,10 @@
+import {SkImage} from '@shopify/react-native-skia'
+import {RefObject} from 'react'
+import {View} from 'react-native'
+import {SharedValue} from 'react-native-reanimated'
+
+import {AppTheme} from './enums'
+
 export interface ICity {
   name: string
   country: string
@@ -13,7 +20,7 @@ interface ICondition {
   text: string
 }
 
-interface ICurrent {
+export interface ICurrent {
   cloud: number
   condition: ICondition
   feelslike_c: number
@@ -136,4 +143,22 @@ export interface ICityInfo {
   current: ICurrent
   forecast: IForecast
   location: ILocation
+}
+
+export interface IThemeState {
+  theme: AppTheme
+  colors: {
+    primary: string
+    secondary: string
+  }
+  active: boolean
+  overlay1: SkImage | null
+  overlay2: SkImage | null
+}
+
+export interface IColorSchemeContext extends IThemeState {
+  ref: RefObject<View>
+  transition: SharedValue<number>
+  circle: SharedValue<{x: number; y: number; radius: number}>
+  dispatch: (theme: IThemeState) => void
 }
