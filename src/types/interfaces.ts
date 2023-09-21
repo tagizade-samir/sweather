@@ -46,7 +46,7 @@ export interface ICurrent {
   wind_mph: number
 }
 
-interface IAstro {
+export interface IAstro {
   is_moon_up: number
   is_sun_up: number
   moon_illumination: number
@@ -57,7 +57,7 @@ interface IAstro {
   sunset: string
 }
 
-interface IDay {
+export interface IDay {
   avghumidity: number
   avgtemp_c: number
   avgtemp_f: number
@@ -80,7 +80,7 @@ interface IDay {
   uv: number
 }
 
-interface IHour {
+export interface IHour {
   chance_of_rain: number
   chance_of_snow: number
   cloud: number
@@ -116,7 +116,7 @@ interface IHour {
   windchill_f: number
 }
 
-interface IForecastday {
+export interface IForecastday {
   astro: IAstro
   date: string
   date_epoch: number
@@ -161,4 +161,9 @@ export interface IColorSchemeContext extends IThemeState {
   transition: SharedValue<number>
   circle: SharedValue<{x: number; y: number; radius: number}>
   dispatch: (theme: IThemeState) => void
+}
+
+export interface StyleProps {
+  primary: string
+  secondary: string
 }

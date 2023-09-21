@@ -7,7 +7,7 @@ import {View, Text, Pressable} from 'react-native'
 import {CircleLoader} from '../../components/circleLoader'
 import {useColorScheme, useSearchCity} from '../../hooks'
 import {useCitiesStore} from '../../store'
-import {ICity} from '../../types/interfaces'
+import {ICity, StyleProps} from '../../types/interfaces'
 import {globalStyles, spacing} from '../../ui-kit'
 
 export const AddCity: FC = () => {
@@ -94,11 +94,6 @@ export const AddCity: FC = () => {
       />
     </View>
   )
-}
-
-interface StyleProps {
-  primary: string
-  secondary: string
 }
 
 const useStyles = makeStyles((theme, props: StyleProps) => ({

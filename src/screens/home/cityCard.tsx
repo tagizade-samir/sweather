@@ -9,7 +9,7 @@ import {useCityInfo, useColorScheme} from '../../hooks'
 import {RootStackParamList} from '../../navigation'
 import {unitsSelector, useAppStore} from '../../store'
 import {Routes, TUnits} from '../../types/enums'
-import {ICity} from '../../types/interfaces'
+import {ICity, StyleProps} from '../../types/interfaces'
 import {globalStyles, spacing} from '../../ui-kit'
 import {getTemperature} from '../../utils'
 
@@ -53,11 +53,6 @@ export const CityCard: FC<CityCardProps> = ({city}) => {
       )}
     </Pressable>
   )
-}
-
-interface StyleProps {
-  primary: string
-  secondary: string
 }
 
 const useStyles = makeStyles((theme, props: StyleProps) => ({

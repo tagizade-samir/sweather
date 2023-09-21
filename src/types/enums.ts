@@ -2,6 +2,7 @@ enum Routes {
   Home = 'Home',
   AddCity = 'AddCity',
   CityDetails = 'CityDetails',
+  HourDetails = 'HourDetails',
 }
 
 enum StorageKeys {

@@ -1,9 +1,10 @@
 import {makeStyles} from '@rneui/themed'
 import React, {FC} from 'react'
-import {View, Text} from 'react-native'
+import {View, Text, StyleSheet} from 'react-native'
 
 import {useColorScheme} from '../../hooks'
-import {globalStyles} from '../../ui-kit'
+import {StyleProps} from '../../types/interfaces'
+import {globalStyles, spacing} from '../../ui-kit'
 
 interface DetailRowProps {
   title: string
@@ -23,14 +24,15 @@ export const DetailRow: FC<DetailRowProps> = ({title, value}) => {
   )
 }
 
-interface StyleProps {
-  primary: string
-  secondary: string
-}
-
 const useStyles = makeStyles((theme, props: StyleProps) => ({
   row: {
     ...globalStyles.centeredRow,
+    backgroundColor: props.secondary,
+    padding: spacing.m,
+    borderRadius: spacing.s,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: props.primary,
+    marginBottom: spacing.m,
   },
   title: {
     ...globalStyles.h2light,

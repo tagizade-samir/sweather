@@ -13,6 +13,14 @@ const globalStyles = StyleSheet.create({
     fontSize: 18,
     fontFamily: 'Kanit-Medium',
   },
+  smallText: {
+    fontSize: 16,
+    fontFamily: 'Kanit-Medium',
+  },
+  smallTextLight: {
+    fontSize: 16,
+    fontFamily: 'Kanit-Light',
+  },
   bannerTitle: {
     fontFamily: 'Kanit-Medium',
     fontSize: 56,
@@ -40,6 +48,10 @@ const globalStyles = StyleSheet.create({
   h3light: {
     fontSize: 20,
     fontFamily: 'Kanit-Light',
+  },
+  pLight: {
+    fontFamily: 'Kanit-Light',
+    fontSize: 18,
   },
   centeredContainer: {
     flex: 1,
