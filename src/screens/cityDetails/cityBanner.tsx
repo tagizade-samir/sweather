@@ -30,7 +30,7 @@ export const CityBanner: FC<CityBannerProps> = ({current, cityName, dailyInfo, a
         </Text>
         <Text style={styles.cityNameText}>{cityName}</Text>
       </View>
-      <View>
+      <View style={styles.rightSide}>
         <Text style={styles.smallTempText}>
           Max temp: {getMaxTemp(dailyInfo, tempUnits)} {tempUnits === TUnits.celsius ? '°C' : '°F'}
         </Text>
@@ -56,6 +56,9 @@ const useStyles = makeStyles((theme, props: StyleProps) => ({
     marginBottom: spacing.m,
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  rightSide: {
+    alignItems: 'flex-end',
   },
   temperatureText: {
     ...globalStyles.bannerTitle,

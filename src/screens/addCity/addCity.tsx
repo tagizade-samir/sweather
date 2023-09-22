@@ -1,12 +1,14 @@
 import {Entypo} from '@expo/vector-icons'
 import {useNavigation} from '@react-navigation/native'
 import {Card, FAB, Icon, Input, makeStyles, useTheme} from '@rneui/themed'
+import {StatusBar} from 'expo-status-bar'
 import React, {FC, useMemo} from 'react'
 import {View, Text, Pressable} from 'react-native'
 
 import {CircleLoader} from '../../components/circleLoader'
 import {useColorScheme, useSearchCity} from '../../hooks'
 import {useCitiesStore} from '../../store'
+import {AppTheme} from '../../types/enums'
 import {ICity, StyleProps} from '../../types/interfaces'
 import {globalStyles, spacing} from '../../ui-kit'
 
@@ -74,6 +76,8 @@ export const AddCity: FC = () => {
 
   return (
     <View style={styles.container}>
+      <StatusBar style={AppTheme.light} />
+      <View style={styles.headNotch} />
       <Text style={styles.title}>Search for a city</Text>
       <Input
         placeholder="City name"
@@ -98,9 +102,17 @@ export const AddCity: FC = () => {
 
 const useStyles = makeStyles((theme, props: StyleProps) => ({
   container: {
-    paddingTop: spacing.m,
     paddingHorizontal: spacing.m,
     height: '100%',
+  },
+  headNotch: {
+    height: spacing.xs,
+    width: '25%',
+    backgroundColor: theme.colors.grey3,
+    borderRadius: spacing.s,
+    marginTop: spacing.s,
+    marginBottom: spacing.m,
+    alignSelf: 'center',
   },
   title: {
     ...globalStyles.h2,

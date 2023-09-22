@@ -29,28 +29,30 @@ export const HourDetails: FC = () => {
   const temperature = tempUnits === TUnits.celsius ? '°C' : '°F'
 
   return (
-    <ScrollView style={styles.scrollContainer} contentContainerStyle={styles.scrollContent}>
-      <StatusBar style={AppTheme.light} />
+    <>
       <View style={styles.headNotch} />
-      <Text style={styles.mainTitle}>
-        {getTemperature(hourDetails, tempUnits)} {temperature}
-      </Text>
-      <Text style={styles.subtitle}>{hourDetails.time}</Text>
-      <DetailRow
-        title="Feels like"
-        value={`${getFeelsLike(hourDetails, tempUnits)} ${temperature}`}
-      />
-      <DetailRow title="Chance of rain" value={`${hourDetails.chance_of_rain} %`} />
-      <DetailRow title="Chance of snow" value={`${hourDetails.chance_of_snow} %`} />
-      <DetailRow title="Condition" value={hourDetails.condition.text} />
-      <DetailRow title="Humidity" value={`${hourDetails.humidity} %`} />
-      <DetailRow title="Precipitation" value={`${hourDetails.precip_mm} mm`} />
-      <DetailRow title="Pressure" value={`${hourDetails.pressure_mb} mb`} />
-      <DetailRow title="Visibility" value={`${hourDetails.vis_km} km`} />
-      <DetailRow title="UV index" value={hourDetails.uv} />
-      <DetailRow title="Wind" value={`${hourDetails.wind_mph} mph`} />
-      <DetailRow title="Gusts" value={`${hourDetails.gust_mph} mph`} />
-    </ScrollView>
+      <ScrollView style={styles.scrollContainer} contentContainerStyle={styles.scrollContent}>
+        <StatusBar style={AppTheme.light} />
+        <Text style={styles.mainTitle}>
+          {getTemperature(hourDetails, tempUnits)} {temperature}
+        </Text>
+        <Text style={styles.subtitle}>{hourDetails.time}</Text>
+        <DetailRow
+          title="Feels like"
+          value={`${getFeelsLike(hourDetails, tempUnits)} ${temperature}`}
+        />
+        <DetailRow title="Chance of rain" value={`${hourDetails.chance_of_rain} %`} />
+        <DetailRow title="Chance of snow" value={`${hourDetails.chance_of_snow} %`} />
+        <DetailRow title="Condition" value={hourDetails.condition.text} />
+        <DetailRow title="Humidity" value={`${hourDetails.humidity} %`} />
+        <DetailRow title="Precipitation" value={`${hourDetails.precip_mm} mm`} />
+        <DetailRow title="Pressure" value={`${hourDetails.pressure_mb} mb`} />
+        <DetailRow title="Visibility" value={`${hourDetails.vis_km} km`} />
+        <DetailRow title="UV index" value={hourDetails.uv} />
+        <DetailRow title="Wind" value={`${hourDetails.wind_mph} mph`} />
+        <DetailRow title="Gusts" value={`${hourDetails.gust_mph} mph`} />
+      </ScrollView>
+    </>
   )
 }
 
@@ -60,7 +62,7 @@ const useStyles = makeStyles((theme, props: StyleProps) => ({
     width: '25%',
     backgroundColor: theme.colors.grey3,
     borderRadius: spacing.s,
-    marginTop: spacing.s,
+    marginVertical: spacing.s,
     alignSelf: 'center',
   },
   scrollContainer: {
