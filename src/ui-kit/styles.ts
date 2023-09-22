@@ -7,26 +7,51 @@ const globalStyles = StyleSheet.create({
   centeredRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
   },
   p: {
-    color: '#000',
     fontSize: 18,
     fontFamily: 'Kanit-Medium',
   },
+  smallText: {
+    fontSize: 16,
+    fontFamily: 'Kanit-Medium',
+  },
+  smallTextLight: {
+    fontSize: 16,
+    fontFamily: 'Kanit-Light',
+  },
+  bannerTitle: {
+    fontFamily: 'Kanit-Medium',
+    fontSize: 56,
+  },
   h1: {
-    color: '#000',
     fontSize: 32,
     fontFamily: 'Kanit-Medium',
   },
   h2: {
-    color: '#000',
     fontSize: 24,
     fontFamily: 'Kanit-Medium',
   },
   h3: {
-    color: '#000',
     fontSize: 20,
     fontFamily: 'Kanit-Medium',
+  },
+  h1light: {
+    fontSize: 32,
+    fontFamily: 'Kanit-Light',
+  },
+  h2light: {
+    fontSize: 24,
+    fontFamily: 'Kanit-Light',
+  },
+  h3light: {
+    fontSize: 20,
+    fontFamily: 'Kanit-Light',
+  },
+  pLight: {
+    fontFamily: 'Kanit-Light',
+    fontSize: 18,
   },
   centeredContainer: {
     flex: 1,

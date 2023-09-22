@@ -18,6 +18,10 @@ export const theme = createTheme({
       titleStyle: {
         fontFamily: 'Kanit-Medium',
       },
+      containerStyle: {
+        borderRadius: 8,
+        borderWidth: 1,
+      },
     },
   },
 })
