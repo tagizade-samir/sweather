@@ -13,7 +13,7 @@ Sweather is a simple application that allows its users to look up the weather in
 
 The theme animation is inspired by [an amazing tutorial from William Candillon](https://www.youtube.com/watch?v=vKYEFpO06Tk&ab_channel=WilliamCandillon).
 
-![Animation demo](https://github.com/tagizade-samir/sweather/blob/dev/assets/theme_animation_video.mov?raw=true)
+<img src="https://github.com/tagizade-samir/sweather/blob/master/assets/assets_theme_animation_video.gif" width="200" />
 
 ## Installation
 
